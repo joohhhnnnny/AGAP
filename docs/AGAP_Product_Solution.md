@@ -73,7 +73,7 @@ The initial product family is PHP fixed-term installment lending. Revolving cred
 
 ## Planned cooperative public website
 
-The user requests a cooperative commercial website alongside AGAP's product landing. It will publish approved cooperative information and provide member/staff links into the existing authenticated portal. The [implementation plan](AGAP_Cooperative_Website_Plan.md) proposes a separate public frontend/deployment and preserves the current product landing, identity, member linkage, financial authority and production gates. Cooperative identity, canonical hostname, approved content and informational versus inquiry/onboarding scope remain pending; no new website, membership enrollment service or accepted design is implemented by the plan. `design.md` remains the sole UI authority.
+The user confirms a commercial website for DCCPEC (Davao Coca-Cola Plant Employees Cooperative) alongside AGAP's product landing, under the intended full hostname `dccpec.agap.software`. Release one publishes approved cooperative information/contact details and member/staff links into the existing authenticated portal; inquiry forms, public membership onboarding and CMS are outside this release. The [implementation plan](AGAP_Cooperative_Website_Plan.md) proposes a separate public frontend/deployment and preserves the current product landing, identity, member linkage, financial authority and production gates. Public copy/branding, domain configuration, hosting and institutional acceptance remain pending; no new website, membership enrollment service or accepted design is implemented by the plan. `design.md` remains the sole UI authority.
 
 ## Prepared recording and current extensions
 

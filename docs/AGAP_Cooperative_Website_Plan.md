@@ -1,8 +1,8 @@
-# Cooperative public website implementation plan
+# DCCPEC public website implementation plan
 
 23 November 2026, Asia/Manila. Task **WEB-COOP-01**. Planning baseline: `c3fd889`.
 
-**Status: proposed implementation; no cooperative website, domain, hosting change or accepted visual design is supplied.** The user requests a cooperative commercial website alongside AGAP's product landing. Cooperative identity, final hostname, approved content and first-release form requirements remain open. For planning, use an informational site with contact details and portal links, and `coop.agap.software` as an illustrative hostname. Neither is a confirmed institution decision. The historical partner context does not authorize publication of its name, logo, private documents or policies.
+**Status: proposed implementation; no website, hosting/DNS change or accepted visual design is supplied.** The user confirms **DCCPEC — Davao Coca-Cola Plant Employees Cooperative**, a subdomain under the existing AGAP domain, and an informational first release with contact details and member/staff portal links. Interpret the requested shorthand `dccpec.agap` as the full hostname **`dccpec.agap.software`**, using the current `agap.software` parent. This selects the intended public address; it does not establish DNS configuration or institutional release approval. Registered/display-name wording, brand assets, approved public copy and publication permissions still need cooperative review; private source documents and policies are not automatically public content.
 
 ## 1. Outcome and contract proposal
 
@@ -37,12 +37,12 @@ Recommended first release:
 | Address | Responsibility | Action |
 | --- | --- | --- |
 | `https://www.agap.software/` | AGAP product landing and existing web deployment | Retain existing behavior. |
-| `https://coop.agap.software/` | Cooperative public website, illustrative name | Connect to a new public-site project after hostname/content approval. |
+| `https://dccpec.agap.software/` | DCCPEC public website, selected intended address | Connect to a new public-site project after approved content and deployment/DNS validation. |
 | `https://www.agap.software/#/member` | Existing member entry | Public-site **Member portal** link. |
 | `https://www.agap.software/#/staff` | Existing staff entry | Public-site **Staff sign in** link. |
 | Existing portal `/api/*` and configured identity issuer | Private application/identity boundary | Preserve same-origin API forwarding and existing OIDC flow. |
 
-A cooperative-owned domain such as `www.<approved-cooperative-domain>` can instead be the public site's canonical address. Decide this before canonical URLs, sitemap and public launch. If both names are retained, choose one canonical address and redirect the alias. Domain ownership, renewals and operator access belong to the cooperative's agreed operating arrangement.
+Use `https://dccpec.agap.software` for the public site's canonical URLs, sitemap and public launch. Any later cooperative-owned domain or alias requires an explicit canonical/redirect decision; it is not part of this first release. Parent-domain ownership/renewals and delegated DCCPEC publishing/operator access belong to the agreed operating arrangement.
 
 ```mermaid
 flowchart LR
@@ -66,7 +66,7 @@ The cooperative site serves public content without a private session, database o
 
 ## 4. First-release scope and content inputs
 
-The first release can be a focused landing page with ordinary section anchors and separate privacy/accessibility pages. Add full service/news pages only when approved material justifies them. Public pages use real paths; do not duplicate AGAP's hash router for searchable commercial content.
+The confirmed first release is informational: a focused landing page with ordinary section anchors, contact details, member/staff links and separate privacy/accessibility pages. Inquiry forms, online membership applications and a CMS are outside this release. Add full service/news pages only when approved material justifies them. Public pages use real paths; do not duplicate AGAP's hash router for searchable commercial content.
 
 | Public content | Required input and intended action |
 | --- | --- |
@@ -121,7 +121,7 @@ Name a publisher, content reviewer and domain/hosting operator. Record how they 
 
 | Step | Deliverable and dependency | Acceptance gate |
 | --- | --- | --- |
-| 1. Confirm scope/content | Cooperative, hostname, languages, approved material, publisher, inquiry/onboarding choice and budget | Required facts are supplied or visibly pending; no invented brand/service claims. |
+| 1. Prepare approved content | Retain confirmed DCCPEC identity, `dccpec.agap.software` and informational-first scope; obtain languages, approved material, publisher and budget | Confirmed user choices are preserved; missing public facts stay pending and no brand/service claims are invented. |
 | 2. Technical/build spike | Separate app root, shared lockfile/source access, static rendered sample, preview/local portal configuration and independent Vercel build settings | Both web builds work independently; public artifact has no API rewrite/private state; root AGAP build remains unchanged. Freeze the minimal shared manifest/config proposal before further UI work. |
 | 3. UI/content implementation | Proposed amendment in `design.md`, approved content, static pages, SEO/metadata and accessible portal navigation | Review desktop/mobile screenshots and actual rendered content; no competing design guide or duplicated private workflow. |
 | 4. Connection/regression | Member/staff entry through normal authentication, unavailable portal state and existing product landing regression | No private network requests on public-page load; correct environment destinations; no open redirect, role grant, cookie widening or altered consent/financial behavior. |
@@ -145,6 +145,8 @@ Release evidence must identify source revision, hosting project/deployment, appr
 
 This task changes documentation only. Validate introduced repository links/anchors, authority/status consistency, source-path evidence, domain examples and the absence of application/configuration/lockfile changes. Do not report application tests, DNS verification, screenshots or a hosted deployment as newly completed by this plan. Publication of this plan does not enable a website or constitute institutional approval.
 
-Still needed: cooperative identity/brand permission; canonical hostname/domain operator; approved services/membership/contact copy and languages; content approver/publisher; informational versus inquiry/onboarding scope; commercial hosting eligibility/budget; and actual portal-readiness evidence. The informational frontend can be implemented with approved content while hosted portal work proceeds independently.
+Confirmed by the user: DCCPEC (Davao Coca-Cola Plant Employees Cooperative), a DCCPEC subdomain under the existing AGAP domain, and cooperative information/contact details/member-staff links only for release one. The full intended address is `dccpec.agap.software`.
+
+Still needed: final registered/display-name wording and brand permissions; domain/DNS operator access; approved services/membership/contact copy and languages; content approver/publisher; commercial hosting eligibility/budget; and actual portal-readiness evidence. The informational frontend can be implemented with approved content while hosted portal work proceeds independently. Inquiry forms, public onboarding and CMS remain separately scoped future options.
 
 External technical references were checked on 23 November 2026; recheck provider requirements during deployment. Vite's [production-build documentation](https://vite.dev/guide/build.html#multi-page-app) supports the proposed multipage build; static rendering remains an explicit implementation acceptance requirement.
