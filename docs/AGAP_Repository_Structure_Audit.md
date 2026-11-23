@@ -2,7 +2,7 @@
 
 23 November 2026, Asia/Manila. **OPS-STRUCT-01**. Inspected baseline: `5038a36`.
 
-**Status: audit complete; filesystem cleanup and source reorganization have not been executed.** The user requests a folder check before implementing the DCCPEC website. This report distinguishes application dependencies, generated files, local research material and preserved evidence. It does not label a folder disposable solely because it is old or absent from the browser bundle.
+**Status: the authorized cleanup is completed; verification is recorded in section 7.** Sections 1–6 retain the original audit baseline. This report distinguishes application dependencies, generated files, local research material and preserved evidence. It does not label a folder disposable solely because it is old or absent from the browser bundle.
 
 ## 1. Main findings
 
@@ -94,3 +94,32 @@ The first pass should target storage hygiene and root clutter while retaining th
 Read-only checks performed: top-level/depth-two disk inventory; tracked versus ignored inventory; source/script/container/configuration references; all baseline worktree ordinary and ignored status plus commit ancestry; image checksums for `output/` against other tracked images; Git object counts, full integrity check and prune dry run. No private packet, environment or credential contents were needed or exposed. Process/file-handle observations are limited to the visible execution environment and must be repeated before cleanup.
 
 The audit's temporary documentation worktree is separate from the baseline inventory and will be retired after publishing the report. Documentation-only verification uses introduced local links/anchors, scope/status consistency and `git diff --check`; application tests or new UI screenshots are not claimed. Graft and Graphify are unavailable; indexed navigation/graph refresh cannot be claimed. [Assignment](../Assignment.md) and [verification](AGAP_Verification.md#repository-structure-audit--23-november-2026) record the audit and distinguish proposed cleanup from executed work.
+
+## 7. Authorized cleanup execution — 23 November 2026
+
+The user's follow-up authorizes the recommended cleanup after verifying nonuse. Work is isolated on `chore/repository-cleanup-20261123` from `9fa9924`. Robert's shared cleanup proposal retains all application/configuration/dependency and financial interfaces. It retires only reviewed merged checkouts, preserves their local diagnostic evidence, moves four tracked historical files without changing their bytes, and updates the affected documentation references. No owner module, canonical type/token/fixture, model artifact, blind-review content or recorded financial snapshot is changed.
+
+Host-level process and container checks establish the actual local API/frontend are running from source and return HTTP 200. Their environment, installed root dependencies, database/container mounts and private documents are preserved. Unused local review exports may move into an ignored, access-restricted recovery archive only when no runtime/provenance consumer or open file is found; the manifest-bound owner brief remains at its original path. Private blind keys and review packets retain separate restricted destinations. Recovery receipts include original paths and hashes. No raw private packet, credential or session content is committed.
+
+### Executed scope
+
+- Removed only the 50 stale temporary Git packs after a fresh dry-run match, inode/size/mtime validation and host process/file-handle checks: **17,302,946,392 bytes (16.11 GiB)**. Pre/post full Git integrity checks passed; refs/HEAD/status and protected local-file hashes remained unchanged. Garbage decreased to zero; valid packs, other loose objects, refs, reflogs and backup branches were retained.
+- Retired all **17** listed merged checkouts through ordinary `git worktree remove`, without force or branch deletion. Rechecked clean status, main ancestry, ignored contents, host process working directories/arguments/open/mapped files and active container mounts. Preserved **40 diagnostic artifact groups** from those checkouts before removal, with tree/file-hash verification. The four unfinished/unmerged worktrees retain their original HEAD/branch/status; the cleanup task's own temporary worktree is retired after publication.
+- Archived **28** unused ignored root research/export files with unchanged bytes, permissions and SHA-256 receipts. Tracked-reference checks found only ignore rules and synthetic build-context sentinel names. `03-decisions-servicing.md` remains at the root because historical source manifests reference it. The private blind key is stored separately from review material; no completed annotation or private payload was rewritten or published.
+- Archived four obsolete root artifact groups: `.platform-test/`, `playwright-report/`, `test-results/` and `tsconfig.tsbuildinfo`. Removed the unused root `dist/` and `dist-api/` outputs after verifying the live API/frontend use source rather than those outputs. Current root dependencies, `.env`, `.vscode/`, local documents, databases, model weights and pre-existing backups remain preserved.
+- Consolidated the following four tracked historical files with exact SHA-256 equality to their original Git blobs. The proposal's consuming link was updated. The obsolete top-level `output/` directory disappears when the checked rename commit is integrated; no financial or accepted-design snapshot was altered.
+
+| Original path at the audit baseline | Preserved location |
+| --- | --- |
+| `AGAP_Partner_Review_Proposal.docx` | [Partner review source](sources/AGAP_Partner_Review_Proposal.docx) |
+| `output/playwright/01-evidence-warning.png` | [Evidence warning](screenshots/evidence-workflow/01-evidence-warning.png) |
+| `output/playwright/02-source-error-draft.png` | [Source error draft](screenshots/evidence-workflow/02-source-error-draft.png) |
+| `output/playwright/03-fact-error-draft.png` | [Fact error draft](screenshots/evidence-workflow/03-fact-error-draft.png) |
+
+### Recovery and verification
+
+Local recovery material is under `.backups/repository-cleanup-20261123/`, excluded by existing Git/Docker rules and protected by a mode-0700 parent. Mode-0600 receipts contain original paths, branch/commit identities, file hashes and archive destinations. `root-cleanup.json` maps the 28 research files and four root artifact groups; `worktrees-retired.json` maps retained branches and 40 archived diagnostic groups; `tracked-moves.json` records the four unchanged historical-file hashes. `packs-before.json` records the discarded stale-pack metadata, not a backup of those disposable temporary bytes.
+
+Restore an archived local file/group to its recorded original path only after checking for a newer destination. A retired checkout can be recreated with `git worktree add` using its retained branch, then its archived diagnostics restored if needed; dependencies/build outputs are regenerated through that branch's lockfile/scripts. These private recovery archives are local-only and should be retained until the user accepts their retention/disposition. No private archive becomes part of the Git publication.
+
+Verification passed: full Git integrity before/after maintenance, zero reported Git garbage, preserved branch/protected-worktree state, protected local-file hashes, archive transfer hashes and exact four-file Git-blob comparisons. `npm run build`, `npm run api:build` and the synthetic `npm run test:build-context` passed from the isolated checkout. The running source API on port 4100 and frontend on port 5174 both returned HTTP 200 before and after local cleanup. All eight introduced local links/anchors, rename/reference consistency, documentation/evidence-only change scope and `git diff --check` passed; archived research filenames were absent from the built frontend. This maintenance/document-evidence change alters no application, dependency, calculator, API, authentication or database behavior; unrelated application/E2E suites and new UI screenshots are not claimed.

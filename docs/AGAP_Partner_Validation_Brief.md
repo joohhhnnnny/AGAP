@@ -88,7 +88,7 @@ A discussion with staff can validate the problem and proposed process. It cannot
 
 **Preserve these sources with the completed brief.**
 
-- Local evidence: [AGAP Partner Review Proposal](../AGAP_Partner_Review_Proposal.docx), dated 6 October 2026. Its observations are reported by the team and remain subject to partner correction.
+- Local evidence: [AGAP Partner Review Proposal](sources/AGAP_Partner_Review_Proposal.docx), dated 6 October 2026. Its observations are reported by the team and remain subject to partner correction.
 - Team clarification: available DCCPEC support is unknown, provided in this conversation on 12 October 2026.
 - [Official partner-support template](https://www.apru.org/wp-content/uploads/2026/08/Template_2026-Hackathon-Partner-Organization-Letter.pdf): confidential data sharing is unnecessary; participation does not commit a partner to funding or adoption.
 - [Official Phase 2 guidelines](https://www.apru.org/wp-content/uploads/2026/08/Phase-2-Submission-Guidelines_2026-Hackathon_Final.pdf): proposed solutions should reflect partner discussions and address relevant operational challenges.
