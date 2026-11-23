@@ -47,6 +47,8 @@ Contractual hardship amendments, member goals/savings guidance, institution-rubr
 
 ## Contribution workflow
 
+**OPS-STRUCT-01 — 23 November 2026:** the user requests a folder audit before DCCPEC implementation. The [structure audit](docs/AGAP_Repository_Structure_Audit.md) identifies 50 stale Git temporary packs (16.11 GiB), generated outputs, 17 merged/ordinary-clean worktree candidates, four worktrees requiring preservation and local research clutter. Core application/research/design boundaries remain in use. Robert owns the proposed shared cleanup; relevant owners retain local research/review work. This task supplies an audited cleanup scope, not executed deletions or a source reorganization. [Verification](docs/AGAP_Verification.md#repository-structure-audit--23-november-2026) records read-only checks and preservation limits.
+
 Use isolated task branches/worktrees and preserve unrelated work. Coordinate shared contracts and consuming-module changes before integration. Keep one finance engine, one inference adapter, immutable historical records, and explicit unavailable values.
 
 Feature integration requires the checks in [AGENTS.md](AGENTS.md), relevant module tests, and screenshots when UI changes. Documentation-only work requires link, consistency, and artifact-integrity checks. The standing collaboration workflow permits normal direct pushes of checked, requested work to `main`; create a PR only when requested. Existing PR merges and production releases retain their separate authorization requirements.
