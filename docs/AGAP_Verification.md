@@ -2,6 +2,14 @@
 
 **Submission reference: 6 November 2026, Asia/Manila.** Historical application results retain their original implementation dates. The documentation cleanup did not rerun application, database, browser, cloud, or GPU tests. The subsequent Vercel deployment has its own evidence below; it records no institutional or independent model acceptance.
 
+## Cooperative public website planning — 23 November 2026
+
+WEB-COOP-01. The user requests an implementation plan for a cooperative commercial website alongside AGAP's product landing. [The plan](AGAP_Cooperative_Website_Plan.md) records repository evidence, proposed separate public deployment, existing member/staff link wiring, optional later origin migration, public content requirements, ownership, phased delivery, tests, commercial-hosting eligibility and DNS/rollback boundaries. Hostname, brand/content and inquiry/onboarding choices remain pending. This is documentation-only planning, not an implemented or deployed website or an accepted design.
+
+Documentation verification passed on isolated `docs/cooperative-site-plan-20261123` from `c3fd889`: **17 introduced local links/anchors** resolve; linked source paths exist; current hash routes, exact-origin callbacks/CSRF, cookie settings and Vercel rewrite evidence match the plan; status/ownership and provisional-domain wording agree across the plan, product solution, architecture and tracker. The change is limited to those five documentation files; `git diff --check` passed. Official Vercel monorepo/domain/commercial-use and Vite multipage references were checked on the planning date and linked in the plan. Graft and Graphify are unavailable; source inspection used `rg`, and no graph refresh is claimed.
+
+No application tests, browser screenshots, DNS/hosting/account checks or live portal acceptance are rerun/claimed by this task. The unrelated root `.vscode/` work and local development setup remain untouched. This planning document follows the authorized normal direct-main documentation publication path; publication does not authorize a new hosted website or paid resources.
+
 ## Policy selection and login proxy repair — 23 November 2026
 
 CRD-01 / AUTH-01. User-authorized repair on isolated `fix/policy-proxy-20261123` from `fdc1a39`. The [task brief](tasks/production/policy-proxy-repair/IMPLEMENTATION.md) records coordinated ownership and the proposal preceding shared edits. One review-start selector now covers workflow/assessment/history, connected/pilot decision currentness, acceptance and release. Future/expired publications are excluded before replacement ordering; equal latest timestamps yield unavailable. Saved financial/decision/document bytes remain immutable. Proxy trust stays opt-in, network counters remain shared/HMAC-hashed, expiry reset is atomic and 429 includes `Retry-After`. No dependency, public JSON schema, visual rule, real-data or lending activation change is supplied.
