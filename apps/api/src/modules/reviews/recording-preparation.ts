@@ -4,7 +4,7 @@ import type {Pool} from 'pg';
 import type {ActorContext,MemberActorContext,UnitOfWork,MemberUnitOfWork,DocumentStorePort} from '../../../../../packages/contracts/src/ports.js';
 import {WorkflowDraft,WorkflowFactInput} from '../../../../../packages/contracts/src/workflow.js';
 import {PreparedReviewPacket} from '../../../../../packages/contracts/src/prepared-review.js';
-import {comparePrepared} from '../../../../../packages/finance/src/prepared-review.js';
+import {comparePrepared} from '../../../../../packages/finance/src/index.js';
 import {WorkflowService} from '../evidence/workflow.service.js';
 import {GuidanceService} from '../evidence/guidance.service.js';
 import {DocumentsService} from '../evidence/documents.service.js';

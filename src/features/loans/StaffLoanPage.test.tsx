@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import { ApiClientError } from '../../../packages/api-client/src/transport';
-import { UnsavedChangesProvider } from '../access/useUnsavedChanges';
+import { UnsavedChangesProvider } from '../../shared/hooks/useUnsavedChanges';
 import { StaffLoanWorkspace } from './StaffLoanPage';
 import { loanUiFixture } from './loan.test-fixture';
 import type { LoanGateway } from './loan-gateway';

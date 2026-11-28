@@ -1,7 +1,7 @@
 import { cashFlow, sumMoney } from './cash-flow.js';
-import { isCalendarDate, money } from '../../../src/domain/format.js';
-import { validateEvidence, type EvidenceIssue } from '../../../src/domain/evidence.js';
-import type { AssessmentResult, CaseRecord, CashMovement, LoanOffer, ScenarioResult } from '../../../src/domain/types.js';
+import { isCalendarDate, money } from '../../domain/src/format.js';
+import { validateEvidence, type EvidenceIssue } from '../../domain/src/evidence.js';
+import type { AssessmentResult, CaseRecord, CashMovement, LoanOffer, ScenarioResult } from '../../domain/src/types.js';
 
 const calculationVersion = 'cash-flow-v2';
 

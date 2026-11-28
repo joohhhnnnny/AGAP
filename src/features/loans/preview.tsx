@@ -4,7 +4,7 @@ import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import '@fontsource-variable/google-sans';
 import '../../styles/tokens.css';
 import '../../styles/global.css';
-import { UnsavedChangesProvider } from '../access/useUnsavedChanges';
+import { UnsavedChangesProvider } from '../../shared/hooks/useUnsavedChanges';
 import { StaffLoanWorkspace } from './StaffLoanPage';
 import { loanUiFixture } from './loan.test-fixture';
 const fixture = loanUiFixture(new URLSearchParams(location.search).get('state') !== 'pending');

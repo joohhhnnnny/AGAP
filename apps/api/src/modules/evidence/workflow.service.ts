@@ -3,7 +3,7 @@ import type { z } from 'zod';
 import type { ActorContext, MemberActorContext, TransactionContext, MemberTransactionContext, UnitOfWork, MemberUnitOfWork } from '../../../../../packages/contracts/src/ports.js';
 import { WorkflowView, WorkflowFact, WorkflowFactInput, WorkflowDraftReview, WorkflowAssessment, WorkflowPolicy } from '../../../../../packages/contracts/src/workflow.js';
 import { AssessmentCreateSchema, VerificationSchema, EvidenceCorrectionSchema, DraftConfirmationSchema, Id, CalendarDay } from '../../../../../packages/contracts/src/schemas.js';
-import { assessWorkflow } from '../../../../../packages/finance/src/workflow-assessment.js';
+import { assessWorkflow } from '../../../../../packages/finance/src/index.js';
 import { command, recordEvent } from '../../platform/commands.js';
 import { memberCommand, memberEvent } from '../../platform/member-commands.js';
 import { ApiError, notFound } from '../../platform/errors.js';

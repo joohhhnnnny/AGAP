@@ -1,11 +1,20 @@
 import type { AgapClient } from '../../../packages/api-client/src';
 import type { z } from 'zod';
 import { ApiClientError } from '../../../packages/api-client/src/transport';
-import type { CommandReceiptSchema, DecisionCreateSchema, DecisionSchema, RecommendationCreateSchema } from '../../../packages/contracts/src/schemas';
-import type { PreviewViewSchema } from '../../../apps/api/src/modules/decisions/backend-contracts';
-import type { WorkspaceView, HistoryPage, SavedBrief } from '../../../apps/api/src/modules/decisions/staff-views';
-export type { WorkspaceView, HistoryPage, SavedBrief };
-export type Preview = z.output<typeof PreviewViewSchema>;
+import type {
+  CommandReceiptSchema,
+  DecisionCreateSchema,
+  DecisionPreviewSchema,
+  DecisionSchema,
+  RecommendationCreateSchema,
+  StaffDecisionBriefSchema,
+  StaffDecisionHistoryPageSchema,
+  StaffDecisionWorkspaceSchema,
+} from '../../../packages/contracts/src/schemas';
+export type WorkspaceView = z.output<typeof StaffDecisionWorkspaceSchema>;
+export type HistoryPage = z.output<typeof StaffDecisionHistoryPageSchema>;
+export type SavedBrief = z.output<typeof StaffDecisionBriefSchema>;
+export type Preview = z.output<typeof DecisionPreviewSchema>;
 export type DecisionInput = z.input<typeof DecisionCreateSchema>;
 export type WriteOptions = { version: number; csrfToken: string; idempotencyKey: string };
 /** Local consumer port only. Robert supplies the canonical generated-client adapter.

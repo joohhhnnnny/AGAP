@@ -10,7 +10,7 @@ import { ReviewNotices } from './ReviewNotices';
 import type { PriorityReviewGateway } from './gateway';
 const {gateway,session}=vi.hoisted(()=>({gateway:{getPriorityReviewQueue:vi.fn(),getPriorityReviewSummary:vi.fn(),getPriorityReviewHistory:vi.fn(),getPriorityReviewers:vi.fn(),getStaffWorkflow:vi.fn(),recoverPrioritySourceReview:vi.fn(),createPrioritySourceReview:vi.fn(),createPriorityRuleConcern:vi.fn(),checkPriorityConcern:vi.fn(),assignPriorityEscalation:vi.fn(),recordPriorityEscalationDisposition:vi.fn(),getPriorityReviewNotices:vi.fn(),acknowledgePriorityReviewNotice:vi.fn()},session:{user:{id:'00000000-0000-4000-8000-000000000001',organizationId:'00000000-0000-4000-8000-000000000001',roles:['officer'],branchIds:['00000000-0000-4000-8000-000000000001']},csrfToken:'fictional-csrf'}}));
 vi.mock('../access/StaffContext',()=>({useStaff:()=>({session})}));
-vi.mock('../access/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
+vi.mock('../../shared/hooks/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
 const id='00000000-0000-4000-8000-000000000001',at='2026-11-05T00:00:00Z';
 const span={sourceId:id,sourceVersion:1,textVersionId:null,page:1,start:0,end:27};
 const concern={id,requestId:id,origin:'simulated',issueCode:'SOURCE_CONFLICT',text:'Fictional conflicting dates need checking.',question:'Which date is current?',evidence:[{span,quote:'Fictional source statement.'}],state:'unchecked',material:false,basisHash:'a'.repeat(64),stale:false,checkedBy:null,checkedAt:null,reason:'',createdAt:at};

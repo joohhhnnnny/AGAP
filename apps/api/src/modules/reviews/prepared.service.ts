@@ -3,7 +3,7 @@ import { z } from 'zod';
 import type { ActorContext,MemberActorContext,UnitOfWork,MemberUnitOfWork } from '../../../../../packages/contracts/src/ports.js';
 import { PreparedReview,PreparedReviewPacket } from '../../../../../packages/contracts/src/prepared-review.js';
 import type { WorkflowView } from '../../../../../packages/contracts/src/workflow.js';
-import { comparePrepared } from '../../../../../packages/finance/src/prepared-review.js';
+import { comparePrepared } from '../../../../../packages/finance/src/index.js';
 import { canonical } from '../../platform/commands.js';
 import { WorkflowService } from '../evidence/workflow.service.js';
 import { Id,Instant,Version } from '../../../../../packages/contracts/src/common.js';

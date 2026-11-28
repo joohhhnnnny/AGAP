@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { createDemoCases } from '../demo/cases';
 import type { CaseRecord } from './types';
 import { assessCase } from './assessment';
-import { assessCase as sharedAssessCase } from '../../packages/finance/src/assessment';
+import { assessCase as sharedAssessCase } from '../../packages/finance/src/index';
 
 function correctedAna(): CaseRecord {
   const record = createDemoCases()[0];

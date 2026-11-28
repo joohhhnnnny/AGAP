@@ -2,8 +2,8 @@ import { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ApiClientError, type RequestOptions } from '../../../packages/api-client/src/transport';
 import { useStaff } from '../access/StaffContext';
-import { usePage } from '../access/usePage';
-import { useCommand } from '../access/useCommand';
+import { usePage } from '../../shared/hooks/usePage';
+import { useCommand } from '../../shared/hooks/useCommand';
 import { Button, Notice } from '../../shared/ui';
 import { recordedInstant } from './staff-gateway';
 

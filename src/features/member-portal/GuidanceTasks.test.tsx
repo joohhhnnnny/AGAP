@@ -4,7 +4,7 @@ import type { AgapClient } from '../../../packages/api-client/src';
 import { WorkflowDraft,WorkflowView } from '../../../packages/contracts/src/workflow';
 import { questionsFor } from '../../../packages/contracts/src/guidance';
 import { GuidanceTasks } from './GuidanceTasks';
-vi.mock('../access/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
+vi.mock('../../shared/hooks/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
 it('loads newly processed suggestions and invalidates retired sources even when application version is unchanged',async()=>{
  const id='00000000-0000-4000-8000-000000000001',sourceId='00000000-0000-4000-8000-000000000002',textId='00000000-0000-4000-8000-000000000003';
  const draft=WorkflowDraft.parse({id,textVersionId:textId,origin:'simulated',state:'suggested',source:{sourceId,sourceVersion:1,page:1,excerpt:'FICTIONAL school cost'},provenance:{baseModel:'simulated',baseRevision:'a'.repeat(40),artifactSha256:null,promptVersion:'test',schemaVersion:'test',datasetManifestSha256:null,evaluationReference:'simulated'},suggestion:{factId:null,relevance:'included',label:'Newly processed school cost',category:'expense',value:{availability:'unavailable',reason:'Not known yet'},sourceId,sourceVersion:1,statement:null,effectiveDate:null,coverageStart:null,coverageEnd:null,cashDates:[],period:'unknown',basis:'unknown',deduction:'unknown',reason:'Fictional suggestion'}});

@@ -1,5 +1,5 @@
-import { isCalendarDate } from '../../../src/domain/format.js';
-import type { CashMovement } from '../../../src/domain/types.js';
+import { isCalendarDate } from '../../domain/src/format.js';
+import type { CashMovement } from '../../domain/src/types.js';
 export function sumMoney(values: readonly number[]): number {
   if (!values.every(Number.isSafeInteger)) throw new RangeError('Invalid integer money.');
   const result = Number(values.reduce((n, value) => n + BigInt(value), 0n));

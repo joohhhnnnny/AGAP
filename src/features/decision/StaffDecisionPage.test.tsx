@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { ApiClientError } from '../../../packages/api-client/src/transport';
-import { UnsavedChangesProvider } from '../access/useUnsavedChanges';
+import { UnsavedChangesProvider } from '../../shared/hooks/useUnsavedChanges';
 import { StaffDecisionWorkspace } from './StaffDecisionPage';
 import { staffUiFixture, testId } from './staff.test-fixture';
 import type { StaffDecisionGateway } from './staff-gateway';

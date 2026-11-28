@@ -1,7 +1,7 @@
 /** Development-only visual fixture. Not registered in the application router/build. */
 import { createRoot } from 'react-dom/client';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
-import { UnsavedChangesProvider } from '../access/useUnsavedChanges';
+import { UnsavedChangesProvider } from '../../shared/hooks/useUnsavedChanges';
 import { Notice } from '../../shared/ui';
 import { StaffDecisionWorkspace } from './StaffDecisionPage';
 import { staffUiFixture } from './staff.test-fixture';

@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import { z } from 'zod';
-import { money } from '../../../../../src/domain/format.js';
+import { money } from '../../../../../packages/domain/src/format.js';
 import { Text } from '../../../../../packages/contracts/src/schemas.js';
 import { ApiError } from '../../platform/errors.js';
 import { reviewScenarios } from './rules.js';

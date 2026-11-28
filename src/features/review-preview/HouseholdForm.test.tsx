@@ -4,7 +4,7 @@ import type { AgapClient } from '../../../packages/api-client/src';
 import { HouseholdForm } from './HouseholdForm';
 import type { View } from './analysis';
 
-vi.mock('../access/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
+vi.mock('../../shared/hooks/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
 const view:View={applicationId:'00000000-0000-4000-8000-000000000001',version:1,inputVersion:1,sources:[],facts:[],drafts:[],offers:[],latestAssessment:null,aiAvailable:false};
 function fill(){
  fireEvent.change(screen.getByLabelText('Review starts',{exact:true}),{target:{value:'2026-01-01'}});

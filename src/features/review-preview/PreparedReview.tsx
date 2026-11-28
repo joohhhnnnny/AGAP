@@ -4,8 +4,8 @@ import type { PreparedReview } from '../../../packages/contracts/src/prepared-re
 import type { AgapClient } from '../../../packages/api-client/src';
 import { Button,Money,Notice,Badge } from '../../shared/ui';
 import { dateLabel,money } from '../../domain/format';
-import { useCommand } from '../access/useCommand';
-import { useUnsavedChanges } from '../access/useUnsavedChanges';
+import { useCommand } from '../../shared/hooks/useCommand';
+import { useUnsavedChanges } from '../../shared/hooks/useUnsavedChanges';
 import styles from './prepared.module.css';
 type Ready=Extract<z.output<typeof PreparedReview>,{state:'ready'}>;
 export function PreparedReviewReport({data,member,client,csrf,officer,refresh,onBusy}:{data:Ready;member:boolean;client:AgapClient;csrf:string;officer?:string;refresh:()=>void;onBusy:(busy:boolean)=>void}){

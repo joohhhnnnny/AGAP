@@ -4,9 +4,9 @@ import {TrialBalanceCreateSchema,TrialBalanceRunSchema} from '../../../packages/
 import {ApiClientError,type RequestOptions} from '../../../packages/api-client/src/transport';
 import {Badge,Button,Money,Notice} from '../../shared/ui';
 import {useStaff} from '../access/StaffContext';
-import {useCommand} from '../access/useCommand';
-import {usePage} from '../access/usePage';
-import {useUnsavedChanges} from '../access/useUnsavedChanges';
+import {useCommand} from '../../shared/hooks/useCommand';
+import {usePage} from '../../shared/hooks/usePage';
+import {useUnsavedChanges} from '../../shared/hooks/useUnsavedChanges';
 import styles from './reconciliation.module.css';
 
 type Run=z.output<typeof TrialBalanceRunSchema>;type Input=z.input<typeof TrialBalanceCreateSchema>;

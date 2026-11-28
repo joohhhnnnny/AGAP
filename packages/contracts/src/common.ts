@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import type { CalendarDate, Money } from '../../../src/domain/types.js';
+import type { CalendarDate, Money } from '../../domain/src/types.js';
 
 export const CONTRACT_VERSION = '0.4.0';
 export const Id = z.uuid();

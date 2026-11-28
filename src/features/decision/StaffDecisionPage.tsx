@@ -2,18 +2,25 @@ import type { AgapClient } from '../../../packages/api-client/src';
 import DecisionReadiness from './DecisionReadiness';
 import { CheckedRemaining } from '../../shared/ui/CheckedRemaining';
 import { useEffect, useRef, useState } from 'react';
-import { CommandReceiptSchema, DecisionCreateSchema, DecisionSchema, RecommendationCreateSchema } from '../../../packages/contracts/src/schemas';
+import {
+  CommandReceiptSchema,
+  DecisionCreateSchema,
+  DecisionPreviewSchema as PreviewViewSchema,
+  DecisionSchema,
+  RecommendationCreateSchema,
+  StaffDecisionBriefSchema as SavedBriefSchema,
+  StaffDecisionHistoryPageSchema as HistoryPageSchema,
+  StaffDecisionWorkspaceSchema as WorkspaceViewSchema,
+} from '../../../packages/contracts/src/schemas';
 import { ApiClientError } from '../../../packages/api-client/src/transport';
 import { useStaff, type StaffSession } from '../access/StaffContext';
-import { useCommand } from '../access/useCommand';
-import { useUnsavedChanges } from '../access/useUnsavedChanges';
+import { useCommand } from '../../shared/hooks/useCommand';
+import { useUnsavedChanges } from '../../shared/hooks/useUnsavedChanges';
 import { Badge, Button, Money, Notice } from '../../shared/ui';
 import { dateLabel } from '../../domain/format';
 import { DecisionForm, emptyDecisionDraft, type DecisionDraft } from './DecisionForm';
 import { SavedDecisionBrief } from './SavedDecisionBrief';
 import { recordedInstant, unavailableStaffDecisions, type DecisionInput, type HistoryPage, type Preview, type SavedBrief, type StaffDecisionGateway, type WorkspaceView } from './staff-gateway';
-import { WorkspaceViewSchema, HistoryPageSchema, SavedBriefSchema } from '../../../apps/api/src/modules/decisions/staff-views';
-import { PreviewViewSchema } from '../../../apps/api/src/modules/decisions/backend-contracts';
 import styles from './StaffDecisionPage.module.css';
 
 type Common = { app: string; version: number; csrf: string };

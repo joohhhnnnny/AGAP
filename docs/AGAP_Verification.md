@@ -2,6 +2,19 @@
 
 **Submission reference: 6 November 2026, Asia/Manila.** Historical application results retain their original implementation dates. The documentation cleanup did not rerun application, database, browser, cloud, or GPU tests. The subsequent Vercel deployment has its own evidence below; it records no institutional or independent model acceptance.
 
+## Phase 1 dependency-boundary refactor — 28 November 2026
+
+OPS-STRUCT-02, user-authorized Phase 1 execution on isolated `refactor/phase1-dependency-boundaries` from `0912a8a`. Eliminated structural dependency inversions with zero behavioral, arithmetic, or public schema changes:
+
+- Extracted canonical `types.ts`, `format.ts`, and pure `validateEvidence`/`sourceIssue` into `packages/domain/src/` (with barrel `index.ts` and `domain.test.ts`), retained thin compatibility re-exports in `src/domain/`, and rewired `packages/finance`, `packages/contracts/src/common.ts`, and `apps/api/src/modules/decisions/decision-documents.ts`.
+- Completed `packages/finance/src/index.ts` barrel exports (`assessCase`, `cashFlow`, `sumMoney`, `assessWorkflow`, `comparePrepared`) and updated all 8 frontend, backend, and test consumers.
+- Removed frontend `src/features/decision/` imports from `apps/api/src/modules/decisions/*` (`StaffDecisionPage.tsx`, `staff-gateway.ts`, `staff.test-fixture.ts`), sourcing schemas directly from `packages/contracts/src/schemas`.
+- Moved shared React hooks (`useCommand`, `usePage`, `useUnsavedChanges`) from `src/features/access/` to `src/shared/hooks/` and updated all 36 importers and test mocks.
+- Added automated `no-restricted-imports` layer boundary rules in `eslint.config.js`.
+- Preserved `models/qwen/service/finding.schema.json` and `evaluation/synthetic/reviews/development-v1/development/finding.schema.json` untouched because they represent distinct schema targets and are SHA-256 checksum-bound in release/evaluation manifests.
+
+Local verification passed under Node 24.12.0 and disposable test PostgreSQL containers: `npm run test:local` (**19 passed**), `npm run lint` (0 errors), `npm run contracts:check`, `npm run build`, `npm run api:build`, `npm run worker:build`, `npm test` (**25 files, 278 passed**), `npm run test:platform` (**64 files, 891 passed**, including 3 new `packages/domain` unit tests), `npm run typecheck:evaluation` and `npm run test:evaluation` (**5 files, 109 passed**), `npm run test:e2e` (**149 passed, 4 existing skips**), and `npm run test:build-context` (7 required synthetic inputs retained; 25 private/local inputs excluded). No UI rules changed, so existing screenshots remain valid. `graft` and `graphify` are unavailable on this host; no graph refresh is claimed.
+
 ## Repository cleanup — 23 November 2026
 
 OPS-STRUCT-01, user-authorized execution from `9fa9924` on isolated `chore/repository-cleanup-20261123`. The [execution and recovery record](AGAP_Repository_Structure_Audit.md#7-authorized-cleanup-execution--23-november-2026) records the exact preservation boundary. Removed 50 verified stale temporary Git packs (**16.11 GiB**); full integrity passed before/after and Git garbage is zero. Retired **17** merged, ordinary-clean task checkouts without force or branch deletion after host working-directory/argument/open/mapped-file and container-mount checks. All four unfinished/unmerged worktrees retain their original HEAD/branch/status; **40** local diagnostic groups were hash-verified into the restricted recovery archive.

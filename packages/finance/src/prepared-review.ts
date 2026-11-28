@@ -2,7 +2,7 @@ import type { z } from 'zod';
 import type { PreparedReviewPacket } from '../../contracts/src/prepared-review.js';
 import type { WorkflowView,WorkflowScenario } from '../../contracts/src/workflow.js';
 import { cashFlow,sumMoney } from './cash-flow.js';
-import type { CashMovement } from '../../../src/domain/types.js';
+import type { CashMovement } from '../../domain/src/types.js';
 type View=z.output<typeof WorkflowView>;type Packet=z.output<typeof PreparedReviewPacket>;
 /** The expense is a separate assumption, never a saved member fact. Keep configured minima. */
 export function comparePrepared(view:View,packet:Packet){

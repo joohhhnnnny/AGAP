@@ -7,8 +7,8 @@ import { PriorityReviewRecover, PriorityRuleConcern, PriorityConcernCheck, Prior
 import { ApiClientError } from '../../../packages/api-client/src/transport';
 import { Badge, Button, Notice } from '../../shared/ui';
 import { useStaff } from '../access/StaffContext';
-import { useCommand } from '../access/useCommand';
-import { useUnsavedChanges } from '../access/useUnsavedChanges';
+import { useCommand } from '../../shared/hooks/useCommand';
+import { useUnsavedChanges } from '../../shared/hooks/useUnsavedChanges';
 import { useResource } from '../member-portal/useResource';
 import { reviewLabel, reviewTime } from './PriorityQueuePage';
 import type { PriorityReviewGateway } from './gateway';

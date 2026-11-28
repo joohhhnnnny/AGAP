@@ -2,7 +2,7 @@ import { randomUUID } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
 import { WorkflowAssessment, WorkflowFact, WorkflowPolicy } from '../../../../../packages/contracts/src/workflow.js';
 import { canonical } from '../../platform/commands.js';
-import { assessWorkflow } from '../../../../../packages/finance/src/workflow-assessment.js';
+import { assessWorkflow } from '../../../../../packages/finance/src/index.js';
 import { DecisionSnapshotSchema, ReviewContextSchema } from './context.js';
 import { fictionalBasis } from './backend.test-fixture.js';
 import { workflowDigest } from './workflow-digest.js';

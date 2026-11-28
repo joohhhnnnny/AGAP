@@ -3,7 +3,7 @@ import { CONTRACT_VERSION } from '../../../packages/contracts/src/common';
 import type { StaffSession } from '../access/StaffContext';
 import { createDemoCases } from '../../demo/cases';
 import { assessCase } from '../../domain/assessment';
-import { HistoryPageSchema, SavedBriefSchema, WorkspaceViewSchema } from '../../../apps/api/src/modules/decisions/staff-views';
+import { StaffDecisionBriefSchema as SavedBriefSchema, StaffDecisionHistoryPageSchema as HistoryPageSchema, StaffDecisionWorkspaceSchema as WorkspaceViewSchema } from '../../../packages/contracts/src/schemas';
 import type { SavedBrief, StaffDecisionGateway, WorkspaceView } from './staff-gateway';
 export const testId = (n: number) => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
 export function staffUiFixture(requested = false) {

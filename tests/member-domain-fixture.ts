@@ -1,7 +1,7 @@
 // Browser rendering fixtures only. These page-scoped responses are explicitly
 // simulated; they do not implement a lending or document service.
 import { createDemoCases } from '../src/demo/cases';
-import { assessCase } from '../packages/finance/src/assessment';
+import { assessCase } from '../packages/finance/src/index';
 import { schemas } from '../packages/contracts/src/schemas';
 
 export const fixtureId=(suffix:number)=>`30000000-0000-4000-8000-${String(suffix).padStart(12,'0')}`;

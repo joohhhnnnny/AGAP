@@ -9,7 +9,7 @@ import {FollowUpHistory} from './FollowUpHistory';
 
 const {client}=vi.hoisted(()=>({client:{listSupportFollowUps:vi.fn(),getSupportFollowUp:vi.fn(),completeSupportFollowUp:vi.fn(),rescheduleSupportFollowUp:vi.fn(),listSupportFollowUpEvents:vi.fn()}}));
 vi.mock('../access/StaffContext',()=>({useStaff:()=>({client,session:{csrfToken:'fictional-csrf'}})}));
-vi.mock('../access/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
+vi.mock('../../shared/hooks/useUnsavedChanges',()=>({useUnsavedChanges:vi.fn()}));
 const id='00000000-0000-4000-8000-000000000001';
 const task:z.output<typeof SupportFollowUpSchema>={id,requestId:id,memberId:id,branchId:id,assignedOfficerId:id,sourceActionId:id,sourceActionVersion:3,sourceRecordedAt:'2026-11-04T00:00:00Z',originalDate:'2026-11-04',dueDate:'2026-11-04',status:'open',version:1,recordedAt:'2026-11-04T00:00:00Z',recordedBy:id,completedAt:null};
 const detail:z.output<typeof SupportFollowUpDetailSchema>={task,source:{id,version:3,response:'Fictional source response.',internalNote:'Private source note.',recordedBy:id,recordedAt:task.recordedAt,followUpDate:task.dueDate},events:[{id,version:1,kind:'scheduled',status:'open',dueDate:task.dueDate,note:null,recordedAt:task.recordedAt,recordedBy:id}],eventsNextCursor:null};

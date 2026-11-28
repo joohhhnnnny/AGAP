@@ -1,7 +1,7 @@
 import type { z } from 'zod';
 import { WorkflowFact, WorkflowPolicy,WorkflowScenario } from '../../contracts/src/workflow.js';
 import { cashFlow, sumMoney } from './cash-flow.js';
-import type { CashMovement } from '../../../src/domain/types.js';
+import type { CashMovement } from '../../domain/src/types.js';
 
 type Fact = z.output<typeof WorkflowFact>;
 type Policy = z.output<typeof WorkflowPolicy>;

@@ -1,7 +1,6 @@
 import type { z } from 'zod';
 import type { WorkflowView, WorkflowScenario } from '../../../packages/contracts/src/workflow';
-import { assessWorkflow } from '../../../packages/finance/src/workflow-assessment';
-import { cashFlow, sumMoney } from '../../../packages/finance/src/cash-flow';
+import { assessWorkflow, cashFlow, sumMoney } from '../../../packages/finance/src/index';
 import { isCalendarDate, dateLabel, money } from '../../domain/format';
 
 export type View = z.output<typeof WorkflowView>;

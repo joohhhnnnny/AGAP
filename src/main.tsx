@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createHashRouter,RouterProvider } from 'react-router-dom';
 import Root from './app/Root';
-import { UnsavedChangesProvider } from './features/access/useUnsavedChanges';
+import { UnsavedChangesProvider } from './shared/hooks/useUnsavedChanges';
 import { InstallProvider } from './shared/installation/InstallProvider';
 import './styles/global.css';
 
